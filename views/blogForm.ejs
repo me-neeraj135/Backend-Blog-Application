@@ -1,0 +1,27 @@
+<!-- @format -->
+
+<%- include("partial/header") %>
+
+<body>
+  <main class="container">
+    <section class="blogSection">
+      <h2>add blog</h2>
+      <div>
+        <h3 class="error"><%= msg %></h3>
+        <form action="/blogs/new" method="post">
+          <input type="text" name="title" placeholder="title" />
+          <textarea
+            name="description"
+            cols="30"
+            rows="5"
+            placeholder="description"
+          ></textarea>
+          <input type="text" name="author" placeholder="author" />
+          <button type="submit">submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <%- include("partial/footer") %>
+
+</body>

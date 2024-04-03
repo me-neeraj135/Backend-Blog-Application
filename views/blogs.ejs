@@ -1,0 +1,49 @@
+<!-- @format -->
+
+<%- include("partial/header") %>
+
+<body>
+  <main style="min-height: 100vh" class="container">
+  
+ <section class="allBlogsBox flex flex-wrap-yes">
+<% if(blogs.length>0){%>
+
+
+
+   <% blogs.forEach(elm=>{%>
+      <article class="article">
+        <div class="flex justify-between">
+          <span class="h2"><%= elm.title %></span class="h2">
+          <span class="cdate"> created on:<%= new Date(elm.createdAt).toString().substring(0,15)%></span>
+        </div>
+        <p class="description"><%= elm.description.substring(0,150) %>...</p>
+        <span class="auName"> author:<%= elm.author %></span>
+        <p class="auName"><%= elm.slug %></p>
+        <button class="showDetails">
+          <a href="/blogs/<%= elm.slug %>"> show details</a>
+        </button>
+        <div class="edBtn flex justify-between">
+          <div class="likes">
+            <span>
+              💞<%= elm.likes %>
+            </span>
+            <span>
+              👎 <%= elm.dislikes %>
+            </span>
+          </div>
+        </div>
+      </article>
+      <%})%>
+
+
+<%}else{%>
+
+  <h2 style="font-size: 2rem; text-transform: capitalize;font-weight: 600; ">no blog found</h2>
+<%}%>
+
+   
+    </section>
+  </main>
+  <%- include("partial/footer") %>
+
+</body>

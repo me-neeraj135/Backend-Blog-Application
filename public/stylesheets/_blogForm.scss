@@ -1,0 +1,54 @@
+/** @format */
+
+.blogSection {
+  //   width: 100%;
+  height: 100vh;
+  padding-top: 3rem;
+  // border: 1px solid black;
+  h2 {
+    text-transform: capitalize;
+    text-align: center;
+    color: gray;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+  }
+  div {
+    width: 50%;
+    margin: auto;
+    border-radius: 3px;
+    box-shadow: 0 0 4px 4px gray;
+    padding: 2rem;
+    background-color: white;
+  }
+  form {
+    input {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      margin: 1rem 0;
+      text-transform: capitalize;
+      outline-color: cornflowerblue;
+    }
+    textarea {
+      width: 100%;
+      resize: none;
+      padding: 1rem;
+      font-size: 1.1rem;
+      text-transform: capitalize;
+      outline-color: cornflowerblue;
+    }
+
+    button {
+      font-size: 1.2rem;
+      text-transform: capitalize;
+      padding: 0.3rem 5rem;
+      margin: auto;
+      display: block;
+      background-color: cornflowerblue;
+      color: white;
+      border-radius: 3px;
+      border: 1px solid gray;
+    }
+  }
+}

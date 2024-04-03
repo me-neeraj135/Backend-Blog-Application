@@ -1,0 +1,31 @@
+<!-- @format -->
+
+<%- include("partial/header") %>
+
+
+<body>
+  <main class="container">
+    <div class="commentEditForm">
+      <h3>update comment</h3>
+      <form action="/comments/<%= comment.id %>/update" method="post">
+        <input
+          type="text"
+          name="name"
+          placeholder="name"
+          value="<%= comment.name %>"
+        />
+        <textarea
+          name="comment"
+          id=""
+          cols="15"
+          rows="10"
+          placeholder="comment..."
+        >
+<%= comment.comment %>
+    </textarea
+        >
+        <button type="submit">update</button>
+      </form>
+    </div>
+  </main>
+</body>

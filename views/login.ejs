@@ -1,0 +1,33 @@
+<!-- @format -->
+
+<%- include("partial/header") %>
+
+<body>
+  <main class="container registerFormContainer">
+    <h1>get user login</h1>
+    <div class="rform">
+      <h3 class="error"><%=msg %></h3>
+      <form action="/users/login" method="post">
+        <input type="email" name="email" placeholder="email" />
+        <input type="password" name="password" placeholder="password" />
+        <input style="color:cornflowerblue ;" type="submit" value="login"></input>
+      </form>
+      <div class="text-center" >
+        <p class="text-center ptb login-with">login with</p> 
+        <div class="circle">
+         
+          <a href="/auth/github" class="git">
+            <i class="fa-brands fa-github">github</i>
+          </a>
+        </div>
+         <div class="circle google">
+          <a href="/auth/google">
+            <i class="fa-brands fa-google">google</i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <%- include("partial/footer") %>
+
+</body>

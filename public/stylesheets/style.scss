@@ -1,0 +1,162 @@
+/** @format */
+
+@import "reset";
+@import "global";
+@import "flex";
+@import "home";
+@import "dashboard";
+@import "blogForm";
+@import "blog";
+@import "allBlogs";
+@import "commentForm";
+// partial-header
+.pNav {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 600;
+  button {
+    background-color: #42494904;
+    a {
+      // color: rgb(10, 199, 82);
+      color: black;
+    }
+  }
+}
+
+.profile {
+  h2 {
+    text-align: center;
+
+    text-transform: capitalize;
+
+    border-radius: 3px;
+  }
+  ul {
+    width: 17.5%;
+    padding: 0.5rem;
+    background-color: rgb(100, 148, 237);
+    position: absolute;
+    right: 4.2rem;
+    // top: 2rem;
+    li {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      background-color: white;
+      margin: 1rem 0;
+      text-transform: capitalize;
+
+      .logout {
+        width: 10%;
+      }
+      a {
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+.display-none {
+  display: none;
+}
+
+// partial-footer
+footer {
+  height: 10rem;
+  background-color: #e3e3e3;
+  nav {
+    height: 100%;
+    a {
+      color: #61626a;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: capitalize;
+      padding-bottom: 1rem;
+    }
+    ul {
+      li {
+        margin-left: 1rem;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+}
+
+// register-form
+
+$heading-color: #424949;
+
+.registerFormContainer {
+  height: 100vh;
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 2rem 0;
+    color: $heading-color;
+  }
+
+  .rform {
+    width: 50%;
+    margin: auto;
+    border-radius: 4px;
+    padding: 2rem 5rem;
+    box-shadow: 0 0 4px 4px gray;
+    background-color: white;
+
+    form {
+      input {
+        width: 100%;
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        outline-color: cornflowerblue;
+        border: 1px solid gray;
+        border-radius: 3px;
+      }
+      button {
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        border: none;
+        border-radius: 3px;
+        color: white;
+        padding: 0.2rem 1rem;
+        background-color: cornflowerblue;
+        &:hover {
+          background-color: blueviolet;
+        }
+      }
+    }
+  }
+}
+
+// circle
+
+.circle {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+.text-center {
+  text-align: center;
+}
+.ptb {
+  padding: 1rem 0;
+}
+.login-with {
+  text-transform: capitalize;
+  color: #61626a;
+}
+.fa-brands {
+  font-size: 2rem;
+  color: black;
+}
+
+// error-message
+
+.error {
+  font-size: 0.8rem;
+  color: red;
+  text-align: justify;
+}

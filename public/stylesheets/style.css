@@ -1,0 +1,789 @@
+/** @format */
+/** @format */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1;
+  background-color: #f5f5f5;
+  font-family: "Roboto Condensed", sans-serif; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/**
+ * /* Global Styles
+ *
+ * @format
+ */
+/* General */
+html {
+  font-size: 16px; }
+
+/* Container */
+.container {
+  max-width: 100vw;
+  width: 90%;
+  margin: auto; }
+
+/* Anchor Decoration */
+a {
+  text-decoration: none; }
+
+/* Image Adjust */
+.full-width {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+/* Positions */
+.position-absolute {
+  position: absolute; }
+
+.position-relative {
+  position: relative; }
+
+.position-fixed {
+  position: fixed; }
+
+.position-sticky {
+  position: sticky; }
+
+.z-index-100 {
+  z-index: 100; }
+
+.z-index-50 {
+  z-index: 50; }
+
+.z-index-10 {
+  z-index: 10; }
+
+.z-index-1 {
+  z-index: 1; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.35rem 1rem;
+  border-radius: 0.2rem;
+  box-sizing: border-box; }
+
+.btn:hover {
+  cursor: pointer; }
+
+.btn-primary {
+  color: purple;
+  border: 1px solid purple; }
+
+.btn-secondary {
+  color: white;
+  background-color: purple;
+  border: 1px solid purple; }
+
+/**
+ * /* Flex
+ *
+ * @format
+ */
+.flex {
+  display: flex; }
+
+/* Justify Content */
+.justify-start {
+  justify-content: flex-start; }
+
+.justify-end {
+  justify-content: flex-end; }
+
+.justify-center {
+  justify-content: center; }
+
+.justify-between {
+  justify-content: space-between; }
+
+.justify-around {
+  justify-content: space-around; }
+
+.justify-evenly {
+  justify-content: space-evenly; }
+
+/* Align Items */
+.align-start {
+  align-items: flex-start; }
+
+.align-end {
+  align-items: flex-end; }
+
+.align-center {
+  align-items: center; }
+
+.align-stretch {
+  align-items: stretch; }
+
+.align-baseline {
+  align-items: baseline; }
+
+/* Align Content */
+.align-content-start {
+  align-content: flex-start; }
+
+.align-content-end {
+  align-content: flex-end; }
+
+.align-content-center {
+  align-content: center; }
+
+.align-content-stretch {
+  align-content: stretch; }
+
+.align-content-around {
+  align-content: space-around; }
+
+.align-content-between {
+  align-content: space-between; }
+
+/* Flex Wrap */
+.flex-wrap-yes {
+  flex-wrap: wrap; }
+
+.flex-wrap-no {
+  flex-wrap: nowrap; }
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse; }
+
+/* Flex Direction */
+.flex-direction-column {
+  flex-direction: column; }
+
+.flex-direction-column-reverse {
+  flex-direction: column-reverse; }
+
+.flex-direction-row {
+  flex-direction: row; }
+
+.flex-direction-row-reverse {
+  flex-direction: row-reverse; }
+
+/* Align Self */
+.align-self-start {
+  align-self: flex-start; }
+
+.align-self-end {
+  align-self: flex-end; }
+
+.align-self-center {
+  align-self: center; }
+
+.align-self-auto {
+  align-self: auto; }
+
+.align-self-stretch {
+  align-self: stretch; }
+
+.align-self-baseline {
+  align-self: baseline; }
+
+/* Flex basis */
+.flex-100 {
+  flex: 0 1 100%; }
+
+.flex-80 {
+  flex: 0 1 80%; }
+
+.flex-75 {
+  flex: 0 1 75%; }
+
+.flex-70 {
+  flex: 0 1 70%; }
+
+.flex-69 {
+  flex: 0 1 69%; }
+
+.flex-60 {
+  flex: 0 1 60%; }
+
+.flex-59 {
+  flex: 0 1 59%; }
+
+.flex-50 {
+  flex: 0 1 50%; }
+
+.flex-48 {
+  flex: 0 1 48%; }
+
+.flex-40 {
+  flex: 0 1 40%; }
+
+.flex-32 {
+  flex: 0 1 32%; }
+
+.flex-30 {
+  flex: 0 1 30%; }
+
+.flex-25 {
+  flex: 0 1 25%; }
+
+.flex-20 {
+  flex: 0 1 20%; }
+
+/** @format */
+header {
+  background-color: white;
+  padding: 1rem 0;
+  position: sticky;
+  right: 0;
+  top: 0;
+  left: 0; }
+  header .logo figure {
+    height: 2rem;
+    border-right: 3px solid #424949;
+    padding-right: 1rem; }
+  header .logo p {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-left: 1rem;
+    color: #424949; }
+  header div button {
+    background-color: #0dac61;
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 2px;
+    border: 1px solid gray; }
+    header div button a {
+      text-transform: capitalize;
+      color: white; }
+
+.homeSection {
+  height: 100vh; }
+  .homeSection div {
+    padding-top: 3rem; }
+    .homeSection div h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      text-transform: capitalize;
+      color: #424949; }
+    .homeSection div p {
+      color: #424949;
+      margin: 1rem 0;
+      font-size: 0.8rem; }
+
+/** @format */
+.dbSections {
+  height: 100vh; }
+  .dbSections .ad-blog {
+    width: 60%;
+    padding-top: 3rem; }
+    .dbSections .ad-blog div {
+      width: 100%;
+      height: 10rem;
+      text-align: center;
+      border-radius: 3px;
+      background-color: white;
+      box-shadow: 0 0 4px 4px gray; }
+      .dbSections .ad-blog div h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: #302f2f; }
+      .dbSections .ad-blog div .addImg {
+        width: 6%;
+        border-radius: 50%; }
+  .dbSections aside {
+    width: 30%;
+    padding-top: 3rem; }
+    .dbSections aside h2 {
+      width: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-transform: capitalize;
+      background-color: rgba(114, 142, 194, 0.473);
+      border-radius: 3px;
+      padding: 0.5rem 0; }
+    .dbSections aside ul {
+      padding: 1rem;
+      background-color: rgba(100, 148, 237, 0.082); }
+      .dbSections aside ul li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1rem;
+        background-color: ghostwhite;
+        margin: 1rem 0;
+        text-transform: capitalize; }
+        .dbSections aside ul li .logout {
+          width: 10%; }
+        .dbSections aside ul li a {
+          padding-left: 1rem; }
+
+/** @format */
+.blogSection {
+  height: 100vh;
+  padding-top: 3rem; }
+  .blogSection h2 {
+    text-transform: capitalize;
+    text-align: center;
+    color: gray;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0; }
+  .blogSection div {
+    width: 50%;
+    margin: auto;
+    border-radius: 3px;
+    box-shadow: 0 0 4px 4px gray;
+    padding: 2rem;
+    background-color: white; }
+  .blogSection form input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    text-transform: capitalize;
+    outline-color: cornflowerblue; }
+  .blogSection form textarea {
+    width: 100%;
+    resize: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    outline-color: cornflowerblue; }
+  .blogSection form button {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    padding: 0.3rem 5rem;
+    margin: auto;
+    display: block;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 3px;
+    border: 1px solid gray; }
+
+/** @format */
+.articleSection {
+  height: 100vh;
+  padding: 3rem;
+  overflow: auto; }
+  .articleSection article {
+    padding: 2rem;
+    border-radius: 3px;
+    box-shadow: 0 0 4px 4px gray;
+    background-color: white; }
+    .articleSection article .h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-transform: capitalize;
+      color: cornflowerblue; }
+    .articleSection article .cdate {
+      font-size: 0.8rem;
+      text-transform: capitalize;
+      color: cornflowerblue; }
+    .articleSection article .description {
+      font-size: 0.8rem;
+      font-weight: 100;
+      color: gray;
+      margin: 1rem 0;
+      text-align: justify; }
+    .articleSection article .auName {
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-style: italic;
+      text-transform: capitalize;
+      color: rosybrown; }
+    .articleSection article .edBtn {
+      margin: 0.5rem 0; }
+      .articleSection article .edBtn a {
+        color: white;
+        text-transform: capitalize; }
+      .articleSection article .edBtn .eBtn {
+        font-weight: bold;
+        padding: 0rem 0.5rem;
+        border: none;
+        border-radius: 2px;
+        background-color: cornflowerblue; }
+      .articleSection article .edBtn .dBtn {
+        font-weight: bold;
+        padding: 0rem 0.5rem;
+        border-radius: 2px;
+        border: none;
+        background-color: brown; }
+    .articleSection article .likes a {
+      color: black; }
+  .articleSection .commentForm h3 {
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin: 0.4rem 0;
+    color: #424949; }
+  .articleSection .commentForm form {
+    width: 15%; }
+    .articleSection .commentForm form input {
+      width: 100%;
+      text-transform: capitalize;
+      padding: 0rem 0.5rem;
+      border-radius: 3px;
+      outline-color: cornflowerblue;
+      border: 1px solid cornflowerblue; }
+    .articleSection .commentForm form textarea {
+      width: 100%;
+      resize: none;
+      text-transform: capitalize;
+      border-radius: 3px;
+      border: 1px solid cornflowerblue;
+      outline-color: cornflowerblue;
+      margin: 0.3rem 0;
+      padding: 0.5rem; }
+    .articleSection .commentForm form button {
+      text-transform: capitalize;
+      padding: 0.1rem 0.5rem;
+      border-radius: 3px;
+      color: white;
+      border: none;
+      background-color: cornflowerblue; }
+
+.commentSection {
+  margin: 0.5rem 0; }
+  .commentSection .commentBox .cmtBy {
+    text-transform: capitalize;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #424949; }
+  .commentSection .cmt {
+    font-size: 0.7rem;
+    color: #424949;
+    word-break: break-all; }
+  .commentSection .ceBtn {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: capitalize; }
+    .commentSection .ceBtn a {
+      color: green; }
+  .commentSection .cdBtn {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: capitalize; }
+    .commentSection .cdBtn a {
+      color: brown; }
+
+.cLikes,
+.cDislikes {
+  color: black;
+  font-size: 0.7rem;
+  margin: 0 0.2rem; }
+
+/** @format */
+.allBlogsBox {
+  padding: 3rem;
+  gap: 1.3rem; }
+  .allBlogsBox .article {
+    width: 49%;
+    padding: 1rem;
+    border-radius: 3px;
+    box-shadow: 0 0 4px 4px gray;
+    background-color: white; }
+    .allBlogsBox .article .h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-transform: capitalize;
+      color: cornflowerblue; }
+    .allBlogsBox .article .cdate {
+      font-size: 0.8rem;
+      text-transform: capitalize;
+      color: cornflowerblue; }
+    .allBlogsBox .article .description {
+      font-size: 0.8rem;
+      font-weight: 100;
+      color: gray;
+      margin: 1rem 0;
+      text-align: justify; }
+    .allBlogsBox .article .auName {
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-style: italic;
+      text-transform: capitalize;
+      color: cornflowerblue; }
+    .allBlogsBox .article .showDetails {
+      border: none;
+      border-radius: 3px;
+      padding: 0.3rem 0.5rem;
+      margin: 0.95rem 0;
+      background-color: cornflowerblue; }
+      .allBlogsBox .article .showDetails a {
+        text-transform: capitalize;
+        color: white; }
+
+/** @format */
+.commentEditForm {
+  width: 40%;
+  text-align: center;
+  margin: auto;
+  margin-top: 4rem;
+  padding: 1rem;
+  border-radius: 3px;
+  box-shadow: 0 0 4px 4px gray;
+  background-color: white; }
+  .commentEditForm h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+    text-transform: capitalize; }
+  .commentEditForm input {
+    width: 100%;
+    border-radius: 3px;
+    padding: 1rem;
+    border: 2px solid cornflowerblue;
+    margin: 1rem 0;
+    outline-color: coral; }
+  .commentEditForm textarea {
+    width: 100%;
+    padding: 1rem;
+    resize: none;
+    border-radius: 3px;
+    outline-color: coral;
+    border: 2px solid cornflowerblue; }
+  .commentEditForm button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    padding: 0.3rem 3rem;
+    background-color: cornflowerblue; }
+
+.pNav {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 600; }
+  .pNav button {
+    background-color: #42494904; }
+    .pNav button a {
+      color: black; }
+
+.profile h2 {
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 3px; }
+
+.profile ul {
+  width: 17.5%;
+  padding: 0.5rem;
+  background-color: #6494ed;
+  position: absolute;
+  right: 4.2rem; }
+  .profile ul li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    margin: 1rem 0;
+    text-transform: capitalize; }
+    .profile ul li .logout {
+      width: 10%; }
+    .profile ul li a {
+      padding-left: 1rem; }
+
+.display-none {
+  display: none; }
+
+footer {
+  height: 10rem;
+  background-color: #e3e3e3; }
+  footer nav {
+    height: 100%; }
+    footer nav a {
+      color: #61626a;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: capitalize;
+      padding-bottom: 1rem; }
+    footer nav ul li {
+      margin-left: 1rem;
+      padding-bottom: 1rem; }
+
+.registerFormContainer {
+  height: 100vh; }
+  .registerFormContainer h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 2rem 0;
+    color: #424949; }
+  .registerFormContainer .rform {
+    width: 50%;
+    margin: auto;
+    border-radius: 4px;
+    padding: 2rem 5rem;
+    box-shadow: 0 0 4px 4px gray;
+    background-color: white; }
+    .registerFormContainer .rform form input {
+      width: 100%;
+      font-size: 1.2rem;
+      text-transform: capitalize;
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      outline-color: cornflowerblue;
+      border: 1px solid gray;
+      border-radius: 3px; }
+    .registerFormContainer .rform form button {
+      font-size: 1.2rem;
+      text-transform: capitalize;
+      border: none;
+      border-radius: 3px;
+      color: white;
+      padding: 0.2rem 1rem;
+      background-color: cornflowerblue; }
+      .registerFormContainer .rform form button:hover {
+        background-color: blueviolet; }
+
+.circle {
+  display: inline-block;
+  margin: 0 0.5rem; }
+
+.text-center {
+  text-align: center; }
+
+.ptb {
+  padding: 1rem 0; }
+
+.login-with {
+  text-transform: capitalize;
+  color: #61626a; }
+
+.fa-brands {
+  font-size: 2rem;
+  color: black; }
+
+.error {
+  font-size: 0.8rem;
+  color: red;
+  text-align: justify; }
+
+/*# sourceMappingURL=style.css.map */

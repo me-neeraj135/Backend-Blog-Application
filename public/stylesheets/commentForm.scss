@@ -1,0 +1,48 @@
+/** @format */
+
+.commentEditForm {
+  width: 40%;
+  text-align: center;
+  margin: auto;
+  margin-top: 4rem;
+  padding: 1rem;
+  border-radius: 3px;
+  box-shadow: 0 0 4px 4px gray;
+  background-color: white;
+
+  h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+    text-transform: capitalize;
+  }
+
+  input {
+    width: 100%;
+    border-radius: 3px;
+    padding: 1rem;
+    border: 2px solid cornflowerblue;
+    margin: 1rem 0;
+    outline-color: coral;
+  }
+
+  textarea {
+    width: 100%;
+    padding: 1rem;
+    resize: none;
+    border-radius: 3px;
+    outline-color: coral;
+    border: 2px solid cornflowerblue;
+  }
+  button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    padding: 0.3rem 3rem;
+    background-color: cornflowerblue;
+  }
+}

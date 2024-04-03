@@ -1,0 +1,57 @@
+/** @format */
+
+.allBlogsBox {
+  //   height: 100vh;
+  padding: 3rem;
+  // border: 1px solid black;
+  gap: 1.3rem;
+  .article {
+    width: 49%;
+    padding: 1rem;
+    border-radius: 3px;
+    box-shadow: 0 0 4px 4px gray;
+    background-color: white;
+
+    .h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-transform: capitalize;
+      color: cornflowerblue;
+    }
+    .cdate {
+      font-size: 0.8rem;
+      text-transform: capitalize;
+      color: cornflowerblue;
+    }
+    .description {
+      font-size: 0.8rem;
+
+      font-weight: 100;
+      color: gray;
+      margin: 1rem 0;
+      text-align: justify;
+    }
+    .auName {
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-style: italic;
+      text-transform: capitalize;
+      color: cornflowerblue;
+    }
+    .showDetails {
+      border: none;
+      border-radius: 3px;
+      padding: 0.3rem 0.5rem;
+      margin: 0.95rem 0;
+      background-color: cornflowerblue;
+      a {
+        text-transform: capitalize;
+        color: white;
+      }
+    }
+    // .likes {
+    //   //   display: inline-block;
+    //   text-align: right;
+    // }
+  }
+}

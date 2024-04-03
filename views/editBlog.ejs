@@ -1,0 +1,40 @@
+<!-- @format -->
+
+<%- include("partial/header") %>
+
+<body>
+  <main class="container">
+    <section class="blogSection">
+      <div>
+        <h2>update your blog</h2>
+        <form action="/blogs/<%= blog.id %>/update" method="post">
+          <input
+            type="text"
+            name="title"
+            placeholder="title"
+            value="<%= blog.title %>"
+          />
+          <textarea
+            name="description"
+            id=""
+            cols="30"
+            rows="5"
+            placeholder="description"
+          >
+<%= blog.description %>
+        </textarea
+          >
+          <input
+            type="text"
+            name="authorName"
+            placeholder="author"
+            value="<%= blog.author %>"
+          />
+          <button type="submit">update</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <%- include("partial/footer") %>
+
+</body>

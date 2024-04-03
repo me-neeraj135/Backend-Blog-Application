@@ -1,0 +1,74 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blog-app</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%if(user){%>
+<%- include("partial/header") %>
+
+    <%}else{%>
+<header class="hHeader">
+  <nav class="container flex justify-between align-center">
+    <div class="logo flex align-center align-content-center">
+      <figure>
+        <a href="/">
+          <img class="full-width" src="/images/197-1971389_illustration-hd-png-download.png" alt="logo" />
+        </a>
+      </figure>
+      <p>official blogger</p>
+    </div>
+    <div>
+      <button>
+        <a href="/blogs">blogs</a>
+      </button>
+      <button>
+        <a href="/users/login">login</a>
+      </button>
+      <button>
+        <a href="/users/register">register</a>
+      </button>
+    </div>
+  </nav>
+</header>
+    <%}%>
+    
+    <main>
+      <section class="homeSection">
+        <p style="text-align: center; padding-top: 2rem; color: red">
+          <%= msg %>
+        </p>
+        <div class="container">
+          <h1>create your blog</h1>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam dolor
+            odit fuga. Suscipit ullam ipsam at sequi, consectetur provident
+            alias, officia iure, quaerat repellendus quae repudiandae eveniet
+            corporis recusandae consequatur. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Doloribus veritatis eaque eligendi
+            animi dolor, odit cum saepe, eveniet blanditiis ipsa alias, magni
+            nam a tempore est numquam dolorum? At, tempora!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam dolor
+            odit fuga. Suscipit ullam ipsam at sequi, consectetur provident
+            alias, officia iure, quaerat repellendus quae repudiandae eveniet
+            corporis recusandae consequatur. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Doloribus veritatis eaque eligendi
+            animi dolor, odit cum saepe, eveniet blanditiis ipsa alias, magni
+            nam a tempore est numquam dolorum? At, tempora!
+          </p>
+        </div>
+      </section>
+    </main>
+    
+    <%- include("partial/footer") %>
+  </body>
+</html>

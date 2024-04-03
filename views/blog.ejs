@@ -1,0 +1,94 @@
+<!-- @format -->
+
+<%- include("partial/header") %>
+<body>
+  <main class="container">
+    <section class="articleSection">
+      <article class="">
+
+
+          <div class="flex justify-between">
+          <span class="h2"><%= blog.title %></span class="h2">
+          <span class="cdate"> created on:<%= new Date(blog.createdAt).toString().substring(0,15)%></span>
+        </div>
+        <p class="description"><%= blog.description %> .</p>
+        <span class="auName">author: <%= blog.author %></span>
+        <p class="auName"> <%= blog.slug %></p>
+
+        <div class="edBtn flex justify-between">
+          <div>
+            <button class="eBtn">
+              <a href="/blogs/<%= blog.id %>/edit">edit</a>
+            </button>
+            <button class="dBtn">
+              <a href="/blogs/<%= blog.id %>/delete">delete</a>
+            </button>
+          </div>
+
+          <div class="likes">
+            <span>
+              <a href="/blogs/<%= blog.slug %>/likes">💞 <%= blog.likes %></a>
+            </span>
+            <span>
+              <a href="/blogs/<%= blog.slug %>/dislikes">
+                👎 <%= blog.dislikes %></a
+              >
+            </span>
+          </div>
+        </div>
+
+        <!-- comment-form -->
+        <!-- <hr /> -->
+
+        <div class="commentForm">
+          <h3>Comments below</h3>
+          <h4 class="error" ><%= cmtError %></h4>
+          <form action="/blogs/<%= blog.id %>/comment" method="post">
+            <input type="text" name="name" placeholder="name" />
+            <textarea
+              name="comment"
+              id=""
+              cols="15"
+              placeholder="comment..."
+            ></textarea>
+            <button type="submit">comment</button>
+          </form>
+
+          <!-- comments -->
+          <div class="commentSection">
+            <div class="commentBox">
+              <% blog.comments.forEach(elm=>{%>
+              <p class="cmtBox">
+                <span class="cmtBy"><%= elm.name %>:</span>
+                <span class="cmt"> <%= elm.comment %></span>
+                <span>
+                  <a class="cLikes" href="/comments/<%= elm.id %>/likes">
+                    💞<%= elm.like %></a
+                  >
+                </span>
+                <span>
+                  <a class="cDislikes" href="/comments/<%= elm.id %>/dislikes"
+                    >👎 <%= elm.dislike %></a
+                  >
+                </span>
+
+                <span class="ceBtn">
+                  <a href="/comments/<%= elm.id %>/edit">edit</a>
+                </span>
+                <span class="cdBtn">
+                  <a href="/comments/<%= elm.id %>/delete">delete</a>
+                </span>
+              </p>
+              <br />
+              <%})%>
+            </div>
+          </div>
+        </div>
+
+        <!-- likes & dislikes -->
+      </article>
+    </section>
+  </main>
+<%- include("partial/footer") %>
+
+</body>

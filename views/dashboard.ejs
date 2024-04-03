@@ -1,0 +1,40 @@
+<!-- @format -->
+
+<%- include("partial/header") %>
+
+<body>
+  <main class="container">
+    <section class="dbSections flex justify-between">
+      <div class="ad-blog">
+        <div class="flex align-center justify-around">
+          <h1>add your blog</h1>
+          <a class="addImg" href="/blogs/new">
+            <img
+              class="full-width"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN8AAADiCAMAAAD5w+JtAAAAflBMVEX///8zMzMnJyeVlZUaGhro6OjLy8sdHR0gICArKysvLy8jIyMYGBgqKiolJSXQ0ND09PTa2tpJSUm+vr42NjZ6enru7u5eXl6jo6M7Ozvh4eG3t7cKCgpNTU2Kiop0dHSnp6eEhISlpaVhYWFVVVVqamqxsbFCQkJ2dnaRkZEiPTM8AAAE8UlEQVR4nO2diXaqMBRFAYNAQARHnEAr1fb/f/CptM+2TlwccpN19gfI2StkIJKLZb2GJN20irI3GUx65TCbTV902deQzNa2CB0p7T0ycEJv8tFXnepRjPLYD+y/BMLOVCd7CK25cyJXEYuN6nB3k27DC3Z7vPFIdcD76Efyip5td2SqOuI9LOdX7faDTdRWHbI5G3FLb98Lu6pjNqV7s/UOLehr2gdH17veUbCnOmkz1p16fna8Uh21CTOvpp5tCx274KVZ/dwdOlEdls7btXn9L95MdVwyg5qjS9WAW9VxqfTr9749QrdZfk1pvt3TxLvqwDRGhNGlEkxURybR94l+nl43aE5tP+dTdWQSC1r3242gperIJCKi3m4EVR2ZwpTuF7mqQxPo0ma/PZ5Oa1Dy8Gnbvk77hRvK4rMi1GkvLYvJfrFOu6Et6vS3mwBbqkMTgB/8OAM/+HEGfvDjDPzgxxn4wY8z8IMfZ+AHP87AD36cgR/8OAM/+HEGfvDjDPzgxxn4wY8z8IMfZ+AHP87AD36cgR/8OAM/+HEGfvDjjA5+ychtyiivW3riSCe/43qkw8mjdlYsnCiKRGPoejvB5pfbZXUWRdauUWjFzUrHiwPq8Vn1yCD2nPHb9VOg7fco1k/tiAyj4vI50G4pTuuU6UYQjc+XrEpWQuemOxJ454bi6YB+5pIr/uJkQO17ZjReRWCnf/VUR3osMvgl2K5VyUsnpP+jBKdLX06xR06OfbDUf1o4xSm+9TaGdb4vxFdFhMRMPVvKyi+jF1PQA78q+TAxaeb7SVV1rF2niKWeRPu19rDJw5oeOLnJt2dV13BKL0WjD77bpNSOPvh9KzNwbfYfJ7NWJq7NvglW1tjc4WU3wIytnuoMT6VnbVVHeCpba6A6wlMZGO9n+v25UB3hqfSswuj5Yd3krzp96ORNSiHqw259NjV09+WA37YS1RmeSehaVmHuAvuwAWPaXw8/OOxPGHyDHvaXmhRb1YOvrxIkpm4Qfu3vWm+GbsE433+w9Ixco4n/HwVJTWzAzvr4B+eSXk+dO1L+fJtpZVwLzn+/51MYJuj9Lfc+NGkZI6PTavatG5/q04hO59wrWt2JIQsZ8X7+RckkF/o/zMswuPwxLHflh1rfpYHYLi/aHdpwWYa+o6VjEItBUeMzQ+4s74lIeHfQ5JE5uOeCQkT2R9at/x52kqbddlO6Q7pgMLzjet30td+41OF8wD3AD36cgR/8OAM/+HEGfvDjDPzgxxn4wY8z8IMfZ+AHP87AD36cgR/8OAM/+HEGfvDjDPzgxxn4wY8z8IMfZ+AHP87AD36cgR/8OAM/+HHGdL8GJR/iTHVoAkt6UaBwqTo0gQZFN/3TE8F8adMPY3uXv0vBjym9HkI0vf2zfKDX649URyZBrkgiF6ojk1hRi04fSiXpw4w6gGo1fFqWS53gndceEL6bktYB5fr2T7JiQ7tBT8qZcCehrbAHqvOS+aQIhm+q45JJKEsY5/bvsSOr3wO9yxVNGFN7DdN5Vx21EWnNun+/K3lpxKbeKnuu05PRLz7rPAYKLTtfRX57EJ1rrGdZy/n1QSYIaxQU4sz1omNeef17oBqQfM4vrWTiaKk63SNw89A/vUsDz85In+VlTDJb2yJ0ZGUpAyf0BoVuTwzXSdJNqyi3k8GkVw5bs5dtlv0Dqkt9HABUB0AAAAAASUVORK5CYII="
+              alt="add-blog"
+            />
+          </a>
+        </div>
+      </div>
+
+      <aside>
+        <h2 class="profileHeading">profile ▼</h2>
+        <ul class="profileUl">
+          <li>name: <%= user.firstName + ` ` + user.lastName %></li>
+          <li>email: <%= user.email %></li>
+          <li>
+            <img
+              class="logout"
+              src="https://cdn1.vectorstock.com/i/thumb-large/40/25/icon-button-on-off-in-line-art-style-vector-40784025.jpg"
+              alt="logout"
+            />
+            <a href="/users/logout"> logout</a>
+          </li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+<%- include("partial/footer") %>
+
+</body>

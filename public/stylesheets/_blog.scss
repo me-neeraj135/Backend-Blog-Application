@@ -1,0 +1,156 @@
+/** @format */
+
+.articleSection {
+  height: 100vh;
+  padding: 3rem;
+  overflow: auto;
+  article {
+    padding: 2rem;
+    border-radius: 3px;
+    box-shadow: 0 0 4px 4px gray;
+    background-color: white;
+    .h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-transform: capitalize;
+      color: cornflowerblue;
+    }
+    .cdate {
+      font-size: 0.8rem;
+      text-transform: capitalize;
+      color: cornflowerblue;
+    }
+    .description {
+      font-size: 0.8rem;
+
+      font-weight: 100;
+      color: gray;
+      margin: 1rem 0;
+      text-align: justify;
+    }
+    .auName {
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-style: italic;
+      text-transform: capitalize;
+      // color: cornflowerblue;
+      color: rosybrown;
+    }
+    .edBtn {
+      margin: 0.5rem 0;
+      a {
+        color: white;
+        text-transform: capitalize;
+      }
+      .eBtn {
+        font-weight: bold;
+        padding: 0rem 0.5rem;
+        // border: 1px solid gray;
+        border: none;
+        border-radius: 2px;
+        background-color: cornflowerblue;
+      }
+      .dBtn {
+        font-weight: bold;
+        padding: 0rem 0.5rem;
+        border-radius: 2px;
+        // border: 1px solid gray;
+        border: none;
+        background-color: brown;
+      }
+    }
+    .likes {
+      a {
+        color: black;
+      }
+    }
+  }
+
+  .commentForm {
+    // padding-top: 2rem;
+    h3 {
+      // text-transform: capitalize;
+      font-weight: 600;
+      font-size: 0.8rem;
+      margin: 0.4rem 0;
+      color: #424949;
+    }
+    form {
+      width: 15%;
+      //   border: 1px solid black;
+      input {
+        width: 100%;
+        text-transform: capitalize;
+        padding: 0rem 0.5rem;
+        border-radius: 3px;
+        outline-color: cornflowerblue;
+        border: 1px solid cornflowerblue;
+      }
+      textarea {
+        width: 100%;
+        resize: none;
+        text-transform: capitalize;
+        border-radius: 3px;
+
+        border: 1px solid cornflowerblue;
+
+        outline-color: cornflowerblue;
+        margin: 0.3rem 0;
+        padding: 0.5rem;
+      }
+      button {
+        text-transform: capitalize;
+        padding: 0.1rem 0.5rem;
+        border-radius: 3px;
+        color: white;
+        // border: 1px solid gray;
+        border: none;
+        background-color: cornflowerblue;
+      }
+    }
+  }
+}
+// comment -section
+.commentSection {
+  margin: 0.5rem 0;
+  .commentBox {
+    // padding: 0.1rem 0;
+    // .cmtBox {
+    //   margin: 0;
+    //   margin-block-start: 0;
+    // }
+    .cmtBy {
+      text-transform: capitalize;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #424949;
+    }
+  }
+  .cmt {
+    font-size: 0.7rem;
+    color: #424949;
+    word-break: break-all;
+  }
+  .ceBtn {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    a {
+      color: green;
+    }
+  }
+  .cdBtn {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    a {
+      color: brown;
+    }
+  }
+}
+.cLikes,
+.cDislikes {
+  color: black;
+  font-size: 0.7rem;
+  margin: 0 0.2rem;
+}

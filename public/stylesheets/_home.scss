@@ -1,0 +1,60 @@
+/** @format */
+
+// partial header-style
+
+header {
+  background-color: white;
+  padding: 1rem 0;
+  position: sticky;
+  right: 0;
+  top: 0;
+  left: 0;
+  .logo {
+    figure {
+      height: 2rem;
+      border-right: 3px solid #424949;
+      padding-right: 1rem;
+    }
+    p {
+      text-transform: capitalize;
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding-left: 1rem;
+      color: #424949;
+    }
+  }
+  div {
+    button {
+      background-color: rgb(13, 172, 97);
+      font-size: 1rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 2px;
+      border: 1px solid gray;
+      a {
+        text-transform: capitalize;
+        color: white;
+      }
+    }
+  }
+}
+
+// hero-section
+
+.homeSection {
+  height: 100vh;
+
+  div {
+    padding-top: 3rem;
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      text-transform: capitalize;
+      color: #424949;
+    }
+    p {
+      color: #424949;
+      margin: 1rem 0;
+      font-size: 0.8rem;
+    }
+  }
+}

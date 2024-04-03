@@ -1,0 +1,61 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog App</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script
+      src="https://kit.fontawesome.com/f70ada2487.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="hHeader">
+      <nav class="container flex justify-between align-center">
+        <div class="logo flex align-center align-content-center">
+          <figure>
+            <a href="/">
+              <img class="full-width" src="/images/PngItem_1971389.png" />
+            </a>
+          </figure>
+          <p>official blogger</p>
+        </div>
+        <div class="pNav">
+          <button class="botton">
+            <a href="/blogs/new">add blog</a>
+          </button>
+          <button class="botton">
+            <a href="/blogs">blogs</a>
+          </button>
+          <%if(user){%>
+
+          <button class="profile">
+            <h2 class="profileHeading">profile ▼</h2>
+            <ul class="profileUl display-none">
+              <li style="color: coral; font-size: 0.9rem">
+                name: <%=user.firstName+" "+user.lastName%>
+              </li>
+              <li style="color: coral; font-size: 0.9rem">
+                email: <%=user.email%>
+              </li>
+              <li>
+                <img
+                  class="logout"
+                  src="https://cdn1.vectorstock.com/i/thumb-large/40/25/icon-button-on-off-in-line-art-style-vector-40784025.jpg"
+                  alt="logout"
+                />
+                <a href="/users/logout"> logout</a>
+              </li>
+            </ul>
+          </button>
+          <%}%>
+        </div>
+      </nav>
+    </header>
+  </body>
+  <script src="/javascripts/dashboard.js"></script>
+</html>
